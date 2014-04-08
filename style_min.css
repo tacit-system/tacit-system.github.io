@@ -1,0 +1,30 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+body{line-height:1;}
+article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section{display:block;}
+nav ul{list-style:none;}
+blockquote, q{quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+ins{background-color:#ff9;color:#000;text-decoration:none;}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold;}
+del{text-decoration:line-through;}
+abbr[title], dfn[title]{border-bottom:1px dotted;cursor:help;}
+table{border-collapse:collapse;border-spacing:0;}
+hr{display:block;height:1px;border:0;border-top:1px solid #cccccc;margin:1em 0;padding:0;}
+input, select{vertical-align:middle;}
+html, body{height:100%;}
+body{color:#848688;font-family:'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif;overflow:hidden;position:relative;}
+#content{margin-top:-115px;position:absolute;right:50px;text-align:right;top:50%;width:300px;z-index:100;}
+#content h1{background:transparent url(images/logo.png) no-repeat left top;height:127px;width:290px;}
+#content p{font-size:19px;margin-top:10px;}
+#content address{margin-top:35px;opacity:0.8;}
+#content address a{background:transparent url(images/email.png) no-repeat left top;color:#786678;font-size:15px;font-style:normal;font-weight:bold;line-height:19px;padding-left:40px;text-decoration:none;text-shadow:rgba(0,0,0,0.3) -1px 0, rgba(0,0,0,0.1) 0 -1px, rgba(255,255,255,0.3) 0 1px, rgba(0,0,0,0.1) -1px -2px;}
+#background, #background img{height:100%;left:0;position:absolute;top:0;}
+#background{opacity:0.7;width:100%;}
+img#bg0{z-index:15;}
+img#bg1{z-index:14;}
+img#bg2{z-index:13;}
+img#bg3{z-index:12;}
+img#bg4{z-index:11;}
+.screenreader_only{position:absolute !important;clip:rect(1px, 1px, 1px, 1px);padding:0 !important;border:0 !important;height:1px !important;width:1px !important;overflow:hidden;}
+.image_replacement{display:block;text-indent:-999em;overflow:hidden;background-repeat:no-repeat;text-align:left;direction:ltr;}
