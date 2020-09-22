@@ -44,9 +44,18 @@
     </div>
     
     <script>
+      const preload = (url) => {
+          const image = new Image();
+          images.src = url;
+      };
       const $bg = document.getElementById('bg');
       const $rocket = document.getElementById('rocket');
       const audio = new Audio('powerup.mp3');
+      preload('bg1.jpg');
+      preload('bg2.jpg');
+      preload('bg3.jpg');
+      preload('bg4.jpg');
+
       const run = () => {
         document.body.removeEventListener('click', run, false);
         audio.play();
