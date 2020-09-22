@@ -57,19 +57,37 @@
       preload('bg3.jpg');
       preload('bg4.jpg');
 
-      const run = () => {
-        document.body.removeEventListener('click', run, false);
-        audio.play();
-        let frame = 0;
-        let y = 0;
-        let bg = 1;
+      let running = false;
+      let intervalRotateRocket = null;
+      let intervalMove = null;
+      let frame = 0;
+      let y = 0;
+      let bg = 1;
 
-        setInterval(() => {
+      const stop = () => {
+        clearInterval(intervalRotateRocket);
+        clearInterval(intervalMove);
+        running = false;
+      };
+
+      const run = () => {
+        if (running) {
+          stop();
+          return;
+        }
+        running = true;
+        audio.play();
+
+        intervalRotateRocket = setInterval(() => {
           if (++frame > 15) frame = 0;
           $rocket.style.backgroundPositionX = `${frame * 98}px`;
         }, 100);
-        setInterval(() => {
+        intervalMove = setInterval(() => {
           y++;
+          if (y == 75 && bg == 4) {
+            stop();
+            return;
+          }
           let positionY = y * 20 * 100 / 3000;
           if (positionY > 100) {
             positionY = 0;
