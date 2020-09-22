@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Leticia's rocket in space</title>
+    <style>
+      #rocket {
+        width: 98px;
+        height: 125px;
+        background-image: url("rocket_3d.png");
+        background-position-x: 0;
+        position:absolute;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+        bottom: 0;
+      }
+      #bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-image: url("bg1.jpg");
+      }
+      .container {
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;        
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bg"></div>
+    <div class="container">
+      <div id="rocket"></div>
+    </div>
+    
+    <script>
+      const $bg = document.getElementById('bg');
+      const $rocket = document.getElementById('rocket');
+      const audio = new Audio('powerup.mp3');
+      const run = () => {
+        document.body.removeEventListener('click', run, false);
+        audio.play();
+        let frame = 0;
+        let y = 0;
+        let bg = 1;
+
+        setInterval(() => {
+          if (++frame > 15) frame = 0;
+          $rocket.style.backgroundPositionX = `${frame * 98}px`;
+        }, 100);
+        setInterval(() => {
+          y++;
+          let positionY = y * 20 * 100 / 3000;
+          if (positionY > 100) {
+            positionY = 0;
+            y = 0;
+            if (++bg > 4) bg = 1;
+            $bg.style.backgroundImage = `url("bg${bg}.jpg")`;
+            audio.play();
+          }
+          $rocket.style.bottom = `${positionY}%`;
+        }, 20);
+      };
+
+      document.body.addEventListener('click', run, false);
+    </script>
+  </body>
+</html>
