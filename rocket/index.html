@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Leticia's rocket in space</title>
     <style>
       #rocket {
@@ -46,7 +47,7 @@
     <script>
       const preload = (url) => {
           const image = new Image();
-          images.src = url;
+          image.src = url;
       };
       const $bg = document.getElementById('bg');
       const $rocket = document.getElementById('rocket');
